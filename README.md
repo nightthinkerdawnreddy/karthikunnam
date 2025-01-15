@@ -93,15 +93,6 @@ This is a new product for monitoring delivery status (success/failure) of Canadi
 
 ---
 
-## MVP Milestones
-
-| **Milestone**      | **Objective**                                        | **Timeline**       |
-| ------------------ | ---------------------------------------------------- | ------------------ |
-| Foundational Tech  | Enable receipt of customer delivery outcomes.        | September 28, 2024 |
-| MVP Implementation | Near real-time alerting for C86 real-time campaigns. | October 28, 2024   |
-
----
-
 ## How to Measure Success
 
 - **Accuracy**: Compare detected failures with manual script findings.
@@ -113,7 +104,7 @@ This is a new product for monitoring delivery status (success/failure) of Canadi
 
 ## Contact
 
-For questions or feedback, please reach out to the MoniThor development team at [StudioX@capitalone.com](mailto:StudioX@capitalone.com).
+For questions , please reach out to the MoniThor development team at [StudioX@capitalone.com](mailto:StudioX@capitalone.com).
 
 ---
 
