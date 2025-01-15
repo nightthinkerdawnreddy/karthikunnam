@@ -1,96 +1,120 @@
-# MoniThor - Monitoring Delivery Failures for Canadian Alerts
+# MoniThor: A Monitoring Solution for Message Delivery
 
-## Getting Started
-MoniThor is a monitoring solution designed to provide stakeholders with accurate and timely information regarding the delivery status of messages triggered by the Canadian Enterprise Engine (CEE). The solution focuses on delivering failure notifications in near-real time, enabling quick remediation of delivery issues.
+## Introduction
 
-## Key Features
-- **Unified Monitoring**: A single source of truth for monitoring message delivery.
-- **Real-Time Notifications**: Alerts sent within 15 minutes of identifying failures, supporting up to 50 notifications per second.
-- **Incremental Coverage**: Starting with Hermes-triggered real-time C86 alerts, with plans to expand to all Canadian LOB messages.
+MoniThor is a cutting-edge monitoring solution designed to provide accurate and timely information about the delivery status of messages triggered by CEE. In cases of delivery failures, customizable notifications will alert stakeholders, ensuring swift remediation. MoniThor's MVP phase focuses on monitoring real-time C86 intents, providing near-real-time failure notifications.
 
-## Installation
+---
 
-## Usage
-- Monitor real-time C86 intent failures via email notifications.
-- Receive alerts for failure codes such as "Failed to Send" and "Not Yet Reviewed."
-- Use the notifications to understand failure codes and timestamps.
+## What's Changing
 
-## Contributing
+This is a new product for monitoring delivery status (success/failure) of Canadian alerts. It introduces:
 
+- **Unified Monitoring**: A single source of truth for message delivery.
+- **Timely Notifications**: Near-real-time alerts for non-compliance-approved delivery failures.
+- **Incremental Coverage**: Starting with real-time digital alerts from Hermes, aiming for full coverage of all Canadian Lines of Business (LOB) messages, including digital, statements, and letters.
 
-## Maintainers
-This project is maintained by the **Studio X team** and **CEE Product Managers**. For questions, please reach out directly.
+---
 
-## Diagrams
-### System Architecture:
-![image](https://github.com/user-attachments/assets/032f0713-01ce-42c2-8963-6c4e30751820)
+## Rationale
 
+### Current Gaps:
 
-### Alert Flow:
-*(Add alert flow diagram here)*
+- **No Unified Monitoring**: Fragmented monitoring by intent owners leads to inefficiency.
+- **Unclear Failure Codes**: Lack of plain language explanations for failure codes.
+- **Delayed Failure Discovery**: Failures discovered days later, delaying remediation.
 
-## Related Repositories
-- **Repository 1**
-- **Repository 2**
+### Impact:
 
-## Related Content
-- Canadian Enterprise Engine Documentation
-- Hermes Alerting System
+- Increased customer frustration.
+- Erosion of trust in message delivery reliability.
+- Delays in identifying and addressing root causes.
 
-## Noteworthy
-### Current Challenges:
-- Lack of Centralized Monitoring: No unified system exists for tracking delivery success and failures.
-- Unclear Failure Codes: Existing codes lack plain-language descriptions, complicating remediation.
-- Delayed Discovery: Manual processes delay identification of failures.
-- Customer Impact: Delivery delays harm satisfaction and increase regulatory risks.
+---
 
-### MoniThor's Solution:
-- **Real-Time Alerting**: Near-real-time notifications for stakeholders.
-- **Root Cause Analysis**: Plain-language descriptions of failure codes.
-- **Unified Understanding**: Standardized failure definitions.
+## Role of MoniThor
 
-## MVP Scope
-### In Scope:
-- Real-time alerting for C86 email failures triggered by Hermes.
-- Notifications for specific failure codes ("Failed to Send" and "Not Yet Reviewed").
-- Emails containing failure codes, timestamps, and plain-language descriptions.
+- **Unified Monitoring**: A comprehensive system to track message delivery status.
+- **Timely Alerting**: Real-time notifications for failures based on compliance-approved definitions.
+- **Quicker Remediation**: Plain language failure notifications to facilitate swift action.
 
-### Out of Scope:
-- Batch C86 messages or other Hermes campaigns.
-- Failures at Hermes or Maestro stages.
-- UI or customization for alerts.
+---
 
 ## Expected Results
-| Objective              | Metrics                                      | Frequency          |
-|------------------------|----------------------------------------------|--------------------|
-| No unalerted failures | All failures detected and alerted within 15 minutes. | Always on post-launch |
-| Quicker remediation   | Notifications sent within 15 minutes of failures. | Always on post-launch |
-| Reduced risk events   | Fewer delivery-related risk events.           | Quarterly          |
-| Stakeholder satisfaction | Improved confidence in reliability.         | Immediate, then quarterly |
 
-## Timelines
-| Milestone          | Description                                      | Deadline          |
-|--------------------|--------------------------------------------------|-------------------|
-| Foundational Tech  | Enable message delivery outcome tracking through Maestro. | Sept 28, 2024    |
-| MVP Release        | Provide near-real-time alerting for real-time C86 failures. | Oct 28, 2024     |
+| **Metric**                   | **Target**                            | **Frequency**         |
+| ---------------------------- | ------------------------------------- | --------------------- |
+| **Unalerted Failures**       | 0 unalerted failures for C86 messages | Always on post-launch |
+| **Notification Timing**      | Notifications sent within 15 minutes  | Always on post-launch |
+| **Reduction in Risk Events** | Decrease compared to prior quarters   | Quarterly             |
+| **Stakeholder Satisfaction** | Improved satisfaction and confidence  | Monthly/Quarterly     |
+
+---
+
+## MVP Scope
+
+- **In Scope**:
+
+  - Near real-time failure alerting for C86 real-time campaigns.
+  - Notifications for failures between Gumbo and Vendor, and Vendor to Customer.
+  - Email template with campaign type, timestamp, account ID, error code, and plain language explanation link.
+
+- **Out of Scope**:
+
+  - Batch C86 alerts.
+  - UI for notification customization or thresholding.
+  - Monitoring for Hermes or Maestro stage failures.
+
+### Personas
+
+| **Persona**         | **Description**                                    | **Needs**                                                                |
+| ------------------- | -------------------------------------------------- | ------------------------------------------------------------------------ |
+| **Intent Owner**    | Owns the content and delivery of messages.         | Reliable delivery and failure insights for swift remediation.            |
+| **Studio X Team**   | Manages message delivery funnel.                   | Real-time alerts and failure insights for investigation and remediation. |
+| **Product Manager** | Oversees the technical delivery process.           | Trends in delivery rates and insights into key issues.                   |
+| **CEE Leadership**  | Ensures successful delivery of all communications. | Trends, key risk areas, and awareness of major breakdowns.               |
+
+---
+
+## Requirements for MVP
+
+### Functional Requirements
+
+- Failure notifications sent within 15 minutes of failure detection.
+- Alerts for all codes classified as "Failed to Send" or "Not Yet Reviewed."
+- Vendor failure notifications include vendor error messages in plain language.
+- Capability to send up to 50 notifications per second.
+
+### Non-Functional Requirements
+
+- **Performance**: Handle up to 50 notifications/second; maximum delay of 1 hour.
+- **Reliability**: Less than 5% downtime.
+- **Scalability**: Expandable to support all Canadian messages.
+
+---
+
+## MVP Milestones
+
+| **Milestone**      | **Objective**                                        | **Timeline**       |
+| ------------------ | ---------------------------------------------------- | ------------------ |
+| Foundational Tech  | Enable receipt of customer delivery outcomes.        | September 28, 2024 |
+| MVP Implementation | Near real-time alerting for C86 real-time campaigns. | October 28, 2024   |
+
+---
 
 ## How to Measure Success
-- **Validation**: Manual scripts will verify failure detection post-launch.
-- **Stakeholder Feedback**: Guides adjustments for future enhancements.
-- **Metrics**:
-  - Notifications sent within 15 minutes of failure detection.
-  - Reduced delivery failure-related risk events.
 
-## Future Enhancements
-- Support for additional Hermes-triggered campaigns.
-- Customizable alerting thresholds for stakeholders.
-- UI for easier monitoring and customization.
+- **Accuracy**: Compare detected failures with manual script findings.
+- **Notification Speed**: Monitor time taken for alerts to reach stakeholders.
+- **Risk Event Reduction**: Compare risk events to prior quarters.
+- **User Feedback**: Regular surveys and interviews to assess satisfaction.
 
-## Contact Information
-For more information, feedback, or contributions:
+---
 
-- **Studio X team**
-- **CEE Product Managers**
+## Contact
 
-## License
-This project is licensed under [Your License Name].
+For questions or feedback, please reach out to the MoniThor development team at [StudioX@capitalone.com](mailto:StudioX@capitalone.com).
+
+---
+
+MoniThor: Ensuring reliable and compliant message delivery for Canadian LOBs.
