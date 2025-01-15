@@ -1,4 +1,22 @@
 # MoniThor - Monitoring Delivery Failures for Canadian Alerts
+
+## Getting Started
+MoniThor is a monitoring solution designed to provide stakeholders with accurate and timely information regarding the delivery status of messages triggered by the Canadian Enterprise Engine (CEE). The solution focuses on delivering failure notifications in near-real time, enabling quick remediation of delivery issues.  
+
+### Key Features:
+- **Unified Monitoring:** A single source of truth for monitoring message delivery.
+- **Real-Time Notifications:** Alerts sent within 15 minutes of identifying failures, supporting up to 50 notifications per second.
+- **Incremental Coverage:** Starting with Hermes-triggered real-time C86 alerts, with plans to expand to all Canadian LOB messages.
+
+---
+
+## Installation
+Follow these steps to set up MoniThor:
+1. Clone the repository:  
+   ```bash
+   git clone [repository-url]
+
+# MoniThor - Monitoring Delivery Failures for Canadian Alerts
 Getting Started
 MoniThor is a monitoring solution designed to provide stakeholders with accurate and timely information regarding the delivery status of messages triggered by the Canadian Enterprise Engine (CEE). The solution focuses on delivering failure notifications in near-real time, enabling quick remediation of delivery issues.
 
