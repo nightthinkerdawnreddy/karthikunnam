@@ -9,24 +9,6 @@ MoniThor is a monitoring solution designed to provide stakeholders with accurate
 - **Incremental Coverage**: Starting with Hermes-triggered real-time C86 alerts, with plans to expand to all Canadian LOB messages.
 
 ## Installation
-Follow these steps to set up MoniThor:
-
-1. Clone the repository:
-   ```bash
-   git clone [repository-url]
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install # or appropriate package manager
-   ```
-
-3. Configure the environment variables in the `.env` file.
-
-4. Start the application:
-   ```bash
-   npm start
-   ```
 
 ## Usage
 - Monitor real-time C86 intent failures via email notifications.
@@ -34,26 +16,15 @@ Follow these steps to set up MoniThor:
 - Use the notifications to understand failure codes and timestamps.
 
 ## Contributing
-We welcome contributions! Please follow these steps:
 
-1. Fork the repository.
-2. Create a new branch (`feature/your-feature-name`).
-3. Commit your changes:
-   ```bash
-   git commit -m "Add your feature"
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-5. Create a Pull Request.
 
 ## Maintainers
 This project is maintained by the **Studio X team** and **CEE Product Managers**. For questions, please reach out directly.
 
 ## Diagrams
 ### System Architecture:
-*(Add system architecture diagram here)*
+![image](https://github.com/user-attachments/assets/032f0713-01ce-42c2-8963-6c4e30751820)
+
 
 ### Alert Flow:
 *(Add alert flow diagram here)*
