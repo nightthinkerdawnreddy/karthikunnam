@@ -26,7 +26,57 @@ This is a new product for monitoring delivery status (success/failure) of Canadi
 ## Related Repositories
 ### Testing Repositories
 - **[mocks](www.example.com)**
+- **[integration tests](www.example.com)**
+- **[ATDD tests](www.example.com)**
+- **[smoke tests](www.example.com)**
 
+### AWS Repositories
+- **[Security Group](www.example.com)**
+- **[IAM](www.example.com)**
+- **[Shared infrastructure repo](www.example.com)**
+- **[Proxy Repo](www.example.com)**
+- **[s3-bucket-repo](www.example.com)**
+- **[datastore repo](www.example.com)**
+  
+### Operational Repositories
+- **[trex repo](www.example.com)**
+- **[utilities repo](www.example.com)**
+- **[tools repo](www.example.com)**
+
+---
+
+## Related Content
+### Developer Links
+- **[Slack Channel](www.example.com)**
+- **[Jira Board](www.example.com)**
+- **[Jenkins](www.example.com)**
+- **[Sonar](www.example.com)**
+- **[Checkmarx](www.example.com)**
+- **[Artifactory: artifact ID, path](www.example.com)**
+
+### Other Documentation
+- **[Confluence docs](www.example.com)**
+- **[Github Pages](www.example.com)**
+- **[Architectural Diagrams](www.example.com)**
+
+### Operational Links
+- **[runbooks](www.example.com)**
+- **[pagerduty](www.example.com)**
+- **[Splunk](www.example.com)**
+- **[new relic](www.example.com)**
+- **[dashboards](www.example.com)**
+
+---
+## Noteworthy
+## Jenkins
+This is built using Managed Pipeline
+- **[Build](www.example.com)**
+- **[Release](www.example.com)**
+- **[Destroy](www.example.com)**
+
+---
+## External Dependencies
+**DevExchange**
 
 ---
 
