@@ -16,6 +16,13 @@ This is a new product for monitoring delivery status (success/failure) of Canadi
 
 ---
 
+## Diagrams
+- **Deployment**
+  ![image](https://github.com/user-attachments/assets/d21b895f-b298-406c-81c8-8393f4cc20f5)
+
+
+---
+
 ## Rationale
 
 ### Current Gaps:
